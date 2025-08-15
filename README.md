@@ -1,1 +1,1 @@
-# KQL queries targetting MDE data
+# Detection Logic for multiple products

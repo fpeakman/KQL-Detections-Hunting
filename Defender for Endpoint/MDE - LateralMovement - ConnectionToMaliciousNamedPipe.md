@@ -1,4 +1,4 @@
-# Connection to Chat Services which have been abuse for C2 
+# Connection to Malicous Named Pipe
 
 ## Description
 This query detects the creation of a named pipe used by known APT malware.
