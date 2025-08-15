@@ -5,6 +5,7 @@ This query detects a successful attempt to authenticate a session using the devi
 
 
 ```KQL
-IdentityLogonEvents 
-| where ActionType == @"LogonSuccess"
-| where LogonType == @"Cmsi:Cmsi"
+AADSignInEventsBeta
+| where ErrorCode == 0
+| where EndpointCall == "Cmsi:Cmsi"
+| where isempty(AadDeviceId)
