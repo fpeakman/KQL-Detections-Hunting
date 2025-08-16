@@ -5,6 +5,9 @@ This query detects vulnerable drivers being loaded on an endpoint. Uses the FOSS
 
 ### MITRE ATT&CK
 [T1068 Exploitation for Privilge Escalation](https://attack.mitre.org/techniques/T1068/)
+
+### KQL
+
 ```KQL
 let loldrivers = (externaldata (SHA256:string) [@'https://raw.githubusercontent.com/magicsword-io/LOLDrivers/main/detections/hashes/samples.sha256'] with (format='txt'));
 loldrivers
