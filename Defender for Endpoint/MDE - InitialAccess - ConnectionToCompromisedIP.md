@@ -12,4 +12,4 @@ This query detects connections to/from IP's known to be compromised by Proofpoin
 ```KQL
 let CompromisedList = externaldata(DestIP: string)[@"https://rules.emergingthreats.net/blockrules/compromised-ips.txt"] with (format="txt", ignoreFirstRecord=False);
 DeviceNetworkEvents
-| where RemoteIP in (MaliciousIP)
+| where RemoteIP in (CompromisedList)
