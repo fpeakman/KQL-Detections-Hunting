@@ -1,10 +1,12 @@
 # DLL Hijacking
 
-## Mitre AT&CK
+## Description
+This query detects suspicious DLL loading events by matching them against a curated list of known vulnerable dlls from Hijacklibs.net. Query modified from https://www.anvilogic.com/detection-voyagers/top-10-kql-queries-every-detection-engineer-should-know
+
+### Mitre ATT&CK
 [T1574.001 Hijack Execution Flow: DLL](https://attack.mitre.org/techniques/T1574/001/)
 
-### Description
-This query detects suspicious DLL loading events by matching them against a curated list of known vulnerable dlls from Hijacklibs.net. Query modified from https://www.anvilogic.com/detection-voyagers/top-10-kql-queries-every-detection-engineer-should-know
+
 
 ```KQL
 let dll_hijacking_source = externaldata
