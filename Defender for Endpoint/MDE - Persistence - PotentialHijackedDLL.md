@@ -6,6 +6,8 @@ This query detects suspicious DLL loading events by matching them against a cura
 ### Mitre ATT&CK
 [T1574.001 Hijack Execution Flow: DLL](https://attack.mitre.org/techniques/T1574/001/)
 
+### KQL
+
 ```KQL
 let dll_hijacking_source = externaldata
 (

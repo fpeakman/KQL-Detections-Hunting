@@ -7,6 +7,8 @@ This query detects mismatches between the phone provider in the EntraID user pro
 
 [T1556.006 Modify Authentication Process: Multi-Factor Authentication](https://attack.mitre.org/techniques/T1556/006/)
 
+### KQL
+
 ```KQL
 CloudAppEvents
 | where ActionType == "Update user." and RawEventData contains "StrongAuthentication"

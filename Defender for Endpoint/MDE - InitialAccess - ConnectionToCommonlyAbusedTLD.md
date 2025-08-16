@@ -7,6 +7,8 @@ This query detects connections to TLDs and ccTLDs that are commonly abused. Buil
 
 [TA0001 Initial Access](https://attack.mitre.org/tactics/TA0001/)
 
+### KQL
+
 ```KQL
 let AbusedTLDs = datatable(extension: string) [
     '.top', '.cc', '.vip', '.xyz', '.cn', '.shop', '.co', '.ru', '.loan', '.xin', '.gdn', '.info', '.bid', '.pro', '.sbs', '.one', '.icu', '.me', '.tv'

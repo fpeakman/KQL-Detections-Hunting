@@ -7,6 +7,8 @@ This query detects a high % of failed sign-in attempts from individual ISP to id
 
 [T1110 Brute Force](https://attack.mitre.org/techniques/T1110/)
 
+### KQL
+
 ```KQL
 IdentityLogonEvents
 | summarize 

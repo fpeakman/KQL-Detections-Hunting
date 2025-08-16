@@ -7,6 +7,8 @@ This query detects potential SMB traffic to a public IP. This could indicate NTL
 
 [T1187 Forced Authentication](https://attack.mitre.org/techniques/T1187/)
 
+### KQL
+
 ```KQL
 DeviceNetworkEvents
 | where ActionType == @"ConnectionSuccess"

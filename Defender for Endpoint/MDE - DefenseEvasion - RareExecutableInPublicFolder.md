@@ -7,6 +7,8 @@ This query detects executable files with low GlobalPrevalence being created in P
 
 [T1204.002 User Execution: Malicious File](https://attack.mitre.org/techniques/T1204/002/)
 
+### KQL
+
 ```KQL
 let ExecutableFileExtensions = dynamic(['bat', 'cmd', 'com', 'cpl', 'ex', 'exe', 'jse', 'msc','ps1', 'reg', 'vb', 'vbe', 'ws', 'wsf', 'hta', '.dll']);
 DeviceFileEvents

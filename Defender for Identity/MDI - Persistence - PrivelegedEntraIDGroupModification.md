@@ -7,6 +7,8 @@ This query detects the modification of highly privileged Entra ID groups
 
 [T1098.003 Account Manipulation: Additional Cloud Roles](https://attack.mitre.org/techniques/T1098/003/)
 
+### KQL
+
 ```KQL
 let PrivilegedEntraGroups = dynamic(["Global Administrators", "Privileged Role Administrators", "Company Administrators", "Security Administrators",
 	"AnyOtherGroupsThatAreAppropriateForYourEnvironment"

@@ -6,6 +6,8 @@ This query detects a potential mail bomb attack where a user receives a suspicio
 ### MIRE ATT&CK
 [T1167 Email Bombing](https://attack.mitre.org/techniques/T1667/)
 
+### KQL
+
 ```KQL
 EmailEvents
 | summarize UniqueSenders = dcount(SenderFromAddress) by bin(Timestamp, 1h), RecipientEmailAddress

@@ -7,6 +7,8 @@ This query detects the receipt of an email from a domain which mimics your own. 
 
 [T1566.002](https://attack.mitre.org/techniques/T1566/002/)
 
+### KQL
+
 ```KQL
 let Domain = tolower("yourdomainhere.com"); //Alter to include the domain you are interested in
 let UnicodeDomain = unicode_codepoints_from_string(Domain);

@@ -7,6 +7,8 @@ This query detects the modification of highly privileged on-premise groups
 
 [T1098.007 Account Manipulation](https://attack.mitre.org/techniques/T1098/)
 
+### KQL
+
 ```KQL
 let PrivilegedOnPremGroups = datatable(GroupName: string) [
     "Account Operators", "Administrators", "Backup Operators", "Domain Admins", "Domain Controllers",

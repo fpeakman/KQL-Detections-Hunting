@@ -7,6 +7,8 @@ This query detects unauthorised RMM tools, using LOLRMM list published by magics
 
 [T1133 External Remote Services](https://attack.mitre.org/techniques/T1133/)
 
+### KQL
+
 ```KQL
 let ApprovedRMM = dynamic(["exampledomain.com"]); // Your approved RMM domain(s)
 let RMMList = externaldata(URI: string, RMMTool: string)

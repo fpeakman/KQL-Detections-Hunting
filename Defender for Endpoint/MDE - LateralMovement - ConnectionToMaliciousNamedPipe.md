@@ -9,6 +9,8 @@ This query detects the creation of a named pipe used by known APT malware.
 
 [T1559 Inter-Process Communication](https://attack.mitre.org/techniques/T1559/)
 
+### KQL
+
 ```KQL
 let badPipeNames = pack_array(
     '\\psexec',                                     // PSexec default pipe

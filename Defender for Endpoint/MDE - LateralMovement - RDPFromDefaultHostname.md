@@ -7,6 +7,8 @@ This query detects inbound RDP connection attempts from a device which uses a de
 
 [T1021 Remote Services](https://attack.mitre.org/techniques/T1021/)
 
+### KQL
+
 ```KQL
 DeviceNetworkEvents
 | where InitiatingProcessRemoteSessionDeviceName startswith "desktop" or InitiatingProcessRemoteSessionDeviceName startswith "laptop"

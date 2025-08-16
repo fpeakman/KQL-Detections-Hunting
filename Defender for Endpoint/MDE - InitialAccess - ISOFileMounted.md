@@ -7,6 +7,8 @@ This query detects an iso shortcut creation event, which occurs when Windows mou
 
 [T1204.003 User Execution: Malicious Image]https://attack.mitre.org/techniques/T1204/003/)
 
+### KQL
+
 ```KQL
 DeviceFileEvents
 | where FileName endswith ".iso.lnk" or FileName endswith ".img.lnk"

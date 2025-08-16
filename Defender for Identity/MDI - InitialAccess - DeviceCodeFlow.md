@@ -7,6 +7,8 @@ This query detects a successful attempt to authenticate a session using the devi
 
 [T1566 Phishing](https://attack.mitre.org/techniques/T1566/)
 
+### KQL
+
 ```KQL
 AADSignInEventsBeta
 | where ErrorCode == 0

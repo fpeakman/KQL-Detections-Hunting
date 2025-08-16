@@ -7,6 +7,8 @@ This query detects potential "Click Fix" attacks where a target is manipulated i
 
 [T1204.004 User Execution: Malicious Copy and Paste](https://attack.mitre.org/techniques/T1204/004/)
 
+### KQL
+
 ```KQL
 let ps_keywords = dynamic(["start-process", "hidden", "command", "bypass", "new-object", "http", "invoke", "iex", "-exec", "verification", "classname", "cimmethod", "methodname", "win32_process", "system.diagnostics.process", "system.management.automation", "Reflection.Assembly", "FromBase64String", "import-module", "add-type", "webclient"]);
 let script_keywords = dynamic (["http", "javascript:", "verification", "eval", ".js", ".vbs", ".hta", ".bat"]);
