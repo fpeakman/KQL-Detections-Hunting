@@ -6,6 +6,7 @@ This query detects SSH connections made outbound to Public IPs. This method can 
 ### Mitre ATT&CK
 
 [T1024.002 Exfiltration Over Alternative Protocol: Exfiltration Over Asymmetric Encrypted Non-C2 Protocol](https://attack.mitre.org/techniques/T1048/002/)
+
 ```KQL
 DeviceNetworkEvents
 | where ActionType == ""SshConnectionInspected""

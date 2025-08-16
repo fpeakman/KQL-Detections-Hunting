@@ -3,6 +3,9 @@
 ## Description
 This query detects BASE64 encoded powershell download commands.
 
+### Mitre ATT&CK
+[T1027.013 Obfuscated Files or Information: Encrypted/Encoded File](https://attack.mitre.org/techniques/T1027/013/)
+
 ```KQL
 let EncodedList = dynamic(['-encodedcommand', '-enc', '-en', '-e']);
 let DownloadVariables = dynamic(['WebClient', 'DownloadFile', 'DownloadData', 'DownloadString', 'WebRequest', 'Shellcode', 'http', 'https']); //Array used with has_any which is case insensitive

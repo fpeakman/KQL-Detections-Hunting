@@ -3,6 +3,10 @@
 ## Description
 This query detects connections to TLDs and ccTLDs that are commonly abused. Built up from the Spamhaus 2024 annual report https://www.spamhaus.org/resource-hub/domain-reputation/domain-reputation-update-oct-2024-mar-2025/
 
+### Mitre ATT&CK
+
+[TA0001 Initial Access](https://attack.mitre.org/tactics/TA0001/)
+
 ```KQL
 let AbusedTLDs = datatable(extension: string) [
     '.top', '.cc', '.vip', '.xyz', '.cn', '.shop', '.co', '.ru', '.loan', '.xin', '.gdn', '.info', '.bid', '.pro', '.sbs', '.one', '.icu', '.me', '.tv'

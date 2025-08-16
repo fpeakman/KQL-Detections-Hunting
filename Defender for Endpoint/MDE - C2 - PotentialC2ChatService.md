@@ -3,6 +3,10 @@
 ## Description
 This query detects connections to chat services which have been abused for C2.
 
+### Mitre ATT&CK
+
+[T1071.001 Application Layer Protocol: Web Protocols](https://attack.mitre.org/techniques/T1071/001/)
+
 ```KQL
 let ChatC2Domains = dynamic(["telegram.org", "discord.com", "discordapp.com", "slack.com", "whatsapp.com"]); //You must tune this for your environment
 DeviceNetworkEvents

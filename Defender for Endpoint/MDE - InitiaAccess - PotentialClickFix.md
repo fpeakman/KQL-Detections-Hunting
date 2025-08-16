@@ -3,6 +3,10 @@
 ## Description
 This query detects potential "Click Fix" attacks where a target is manipulated in to running a malicious command. Adapted from https://detect.fyi/hunting-clickfix-initial-access-techniques-8c1b38d5ef9b. Will not detect BASE64 encyphered PS commands.
 
+### Mitre ATT&CK
+
+[T1204.004 User Execution: Malicious Copy and Paste](https://attack.mitre.org/techniques/T1204/004/)
+
 ```KQL
 let ps_keywords = dynamic(["start-process", "hidden", "command", "bypass", "new-object", "http", "invoke", "iex", "-exec", "verification", "classname", "cimmethod", "methodname", "win32_process", "system.diagnostics.process", "system.management.automation", "Reflection.Assembly", "FromBase64String", "import-module", "add-type", "webclient"]);
 let script_keywords = dynamic (["http", "javascript:", "verification", "eval", ".js", ".vbs", ".hta", ".bat"]);

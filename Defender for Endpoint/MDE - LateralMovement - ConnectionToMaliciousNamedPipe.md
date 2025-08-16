@@ -5,6 +5,9 @@ This query detects the creation of a named pipe used by known APT malware.
 // Reference - https://docs.microsoft.com/openspecs/windows_protocols/ms-wpo/4de75e21-36fd-440a-859b-75accc74487c
 // This query was updated from https://github.com/Azure/Azure-Sentinel/tree/master/Hunting%20Queries/Microsoft%20365%20Defender/Command%20and%20Control/C2-NamedPipe.yaml
 
+### Mitre ATT&CK
+
+[T1559 Inter-Process Communication](https://attack.mitre.org/techniques/T1559/)
 
 ```KQL
 let badPipeNames = pack_array(

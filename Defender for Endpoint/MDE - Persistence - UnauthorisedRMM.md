@@ -3,6 +3,10 @@
 ## Description
 This query detects unauthorised RMM tools, using LOLRMM list published by magicsword. Ripped from https://lolrmm.io/
 
+### Mitre ATT&CK
+
+[T1133 External Remote Services](https://attack.mitre.org/techniques/T1133/)
+
 ```KQL
 let ApprovedRMM = dynamic(["exampledomain.com"]); // Your approved RMM domain(s)
 let RMMList = externaldata(URI: string, RMMTool: string)
