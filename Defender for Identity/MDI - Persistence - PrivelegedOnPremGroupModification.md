@@ -3,6 +3,9 @@
 ## Description
 This query detects the modification of highly privileged on-premise groups
 
+### Mitre ATT&CK
+
+[T1098.007 Account Manipulation](https://attack.mitre.org/techniques/T1098/)
 
 ```KQL
 let PrivilegedOnPremGroups = datatable(GroupName: string) [

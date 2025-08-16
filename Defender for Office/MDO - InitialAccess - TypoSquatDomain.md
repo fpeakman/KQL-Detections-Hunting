@@ -3,6 +3,10 @@
 ## Description
 This query detects the receipt of an email from a domain which mimics your own. Ripped from https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Office%20365/Email%20-%20TyposquattedEmailRecieved.md
 
+### Mitre ATT&CK
+
+[T1566.002](https://attack.mitre.org/techniques/T1566/002/)
+
 ```KQL
 let Domain = tolower("yourdomainhere.com"); //Alter to include the domain you are interested in
 let UnicodeDomain = unicode_codepoints_from_string(Domain);

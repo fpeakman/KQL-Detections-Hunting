@@ -1,7 +1,7 @@
 # User updated with new phone number for MFA which does not match number in Entra ID
 
 ## Description
-This query detects mismatches between the phone provider in the EntraID user profile and the phone number used to authenticate via MFA.
+This query detects mismatches between the phone provider in the EntraID user profile and the phone number used to authenticate via MFA
 
 ### MITRE ATT&CK
 
