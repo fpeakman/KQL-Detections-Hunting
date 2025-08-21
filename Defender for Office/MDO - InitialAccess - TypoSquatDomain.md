@@ -5,7 +5,7 @@ This query detects the receipt of an email from a domain which mimics your own. 
 
 ### Mitre ATT&CK
 
-[T1566.002](https://attack.mitre.org/techniques/T1566/002/)
+[T1566.002 Phishing: Spearphishing Link](https://attack.mitre.org/techniques/T1566/002/)
 
 ### KQL
 
