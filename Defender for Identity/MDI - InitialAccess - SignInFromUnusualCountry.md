@@ -12,11 +12,11 @@ This query detects a successful sign in from a country not seen in the last 30 d
 ```KQL
 let KnownCountries = AADSignInEventsBeta
 | where ErrorCode == 0
-| where TimeGenerated > ago(1d)
+| where TimeGenerated < ago(1d)
 | where isnotempty(Country)
 | distinct Country;
 AADSignInEventsBeta
 | where ErrorCode == 0
-| where TimeGenerated < ago(1d)
+| where TimeGenerated > ago(1d)
 | where isnotempty(Country)
 | where Country !in (KnownCountries)
