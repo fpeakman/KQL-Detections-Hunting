@@ -1,4 +1,4 @@
-# Email from Typo Squat Domin Received
+# Email from Typo Squat Domain Received
 
 ## Description
 This query detects the receipt of an email from a domain which mimics your own. Ripped from https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules/blob/main/Office%20365/Email%20-%20TyposquattedEmailRecieved.md
