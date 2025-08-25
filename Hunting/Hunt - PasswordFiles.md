@@ -1,7 +1,13 @@
 # Password Files
 
-## Description
-This query looks for file events where the filename suggests insecure storage of credentials/keys/secrets
+|Idea / Hypothesis|Tactic|Notes|
+|---|---|---|
+|Users may store passwords/keys/secrets in an insecure way|[T1555 Credentials from Password Stores](https://attack.mitre.org/techniques/T1555/)||
+
+## Why
+
+- Users who have multiple passwords for multiple systems will often come up with their own method of storing passwords, in the absence of a corporate password manager or other official guidance.
+- Users are often unaware of how to securely store passwords
 
 ### KQL
 
