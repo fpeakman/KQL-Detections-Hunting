@@ -2,7 +2,7 @@
 
 |Idea / Hypothesis|Tactic|Notes|
 |---|---|---|
-|Users may store passwords/keys/secrets in an insecure way|[T1555 Credentials from Password Stores](https://attack.mitre.org/techniques/T1555/)||
+|Users may store passwords/keys/secrets in an insecure way|[T1555 Credentials from Password Stores](https://attack.mitre.org/techniques/T1555/)| Will only detect file creation, modification or deletion events. Does not search for actual files|
 
 ## Why
 
@@ -37,5 +37,5 @@ let InterestingFileNames = dynamic([
 DeviceFileEvents
 | where Timestamp > ago(30d)
 | where FileName in~ (InterestingFileNames)
-| project Timestamp, DeviceName, FileName, FolderPath, SHA256, AccountName, ActionType
+| project Timestamp, DeviceName, FileName, FolderPath, SHA256, InitiatingProcessAccountName, ActionType
 | order by Timestamp desc
