@@ -1,0 +1,22 @@
+# Deprecated SSL/TLS version in use
+
+|Idea / Hypothesis|Tactic|Notes|
+|---|---|---|
+|Attackers may force TLS downgrades, to attempt to use vulnerabilities within these deprecated protocols|[T1562.010 Impair Defences: Downgrade Attack](https://attack.mitre.org/techniques/T1562/010/)||
+
+## Why
+
+- Deprecated protocols may contain vulnerabilities
+- Malicious actors may attempt to coerce system to use these deprecated protocols to facilitate attacks
+- Deprecated protocols may be used by applications, even if they are disabled within the OS
+
+### KQL
+
+```KQL
+let deprecatedprotocols = dynamic(["sslv2","sslv3","tlsv10","tlsv11"]); //all lowercase to avoid any capitalisation issues in AdditionaiFields.version
+DeviceNetworkEvents
+| where Timestamp > ago(7d)
+| where ActionType == "SslConnectionInspected"
+| extend AdditionalFields = todynamic(AdditionalFields)
+| extend Version = tolower(tostring(AdditionalFields.version))
+| where Version in (deprecatedprotocols)
