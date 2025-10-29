@@ -29,6 +29,6 @@ IdentityLogonEvents
         (FailureReason has "The session is not valid due to password expiration or recent password change.") or 
         (FailureReason has "General failure")
     ) 
-    by ISP, Location
+    by Isp, Location
 | extend SuspiciousRatio = Suspicious_Sign_attempt * 1.0 / Total_sign_attempts 
 | where SuspiciousRatio > 0.5 // This will need to be tuned to your environment
