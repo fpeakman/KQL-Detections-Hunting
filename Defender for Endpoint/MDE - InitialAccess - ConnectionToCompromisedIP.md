@@ -1,4 +1,4 @@
-# Connection to Known Censys C2
+# Connection to Known Compromised IP
 
 ## Description
 This query detects connections to/from IP's known to be compromised by Proofpoint. https://rules.emergingthreats.net/
