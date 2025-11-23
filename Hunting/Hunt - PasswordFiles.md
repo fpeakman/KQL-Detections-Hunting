@@ -2,7 +2,7 @@
 
 |Idea / Hypothesis|Tactic|Notes|
 |---|---|---|
-|Users may store passwords/keys/secrets in an insecure way|[T1555 Credentials from Password Stores](https://attack.mitre.org/techniques/T1555/)| Will only detect file creation, modification or deletion events. Does not search for actual files|
+|Users may store passwords/keys/secrets in an insecure way|[T1555 Credentials from Password Stores](https://attack.mitre.org/techniques/T1555/)| False positives are guaranteed, plenty of tuning required |
 
 ## Why
 
