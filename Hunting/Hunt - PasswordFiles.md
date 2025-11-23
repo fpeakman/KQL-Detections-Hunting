@@ -12,30 +12,10 @@
 ### KQL
 
 ```KQL
-let InterestingFileNames = dynamic([
-    "password.txt",
-    "passwords.txt",
-    "creds.txt",
-    "credentials.txt",
-    "login.txt",
-    "pass.txt",
-    "pwd.txt",
-    "secret.txt",
-    "secrets.txt",
-    "key.txt",
-    "keys.txt",
-    "passwords.xlsx",
-    "credentials.xlsx",
-    "password.doc",
-    "passwords.doc",
-    "credential.doc",
-    "credentials.doc",
-    "passwrd.txt",
-    "passwd.txt",
-    "userpass.txt"
-]);
-DeviceFileEvents
+let InterestingKeywords = dynamic(["pass", "cred", "login", "pwd", "secret", "key"]);
+let pattern = strcat("(?i)(", strcat_array(InterestingKeywords, "|"), ")");
+DeviceProcessEvents
 | where Timestamp > ago(30d)
-| where FileName in~ (InterestingFileNames)
-| project Timestamp, DeviceName, FileName, FolderPath, SHA256, InitiatingProcessAccountName, ActionType
+| where CommandLine matches regex pattern
+| project Timestamp, DeviceName, FileName, FolderPath, SHA256, AccountName, CommandLine
 | order by Timestamp desc
