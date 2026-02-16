@@ -10,8 +10,10 @@ This query detects multiple failed sign-in attempts for high-risk user accounts
 ### KQL
 
 ```KQL
-AADSignInEventsBeta
+let TrustedIPs = dynamic(["Your IPs","here"]);
+EntraIdSignInEvents
 | where ErrorCode != 0
+| where IPAddress !in (TrustedIPs)
 | join kind=inner IdentityInfo on $left.AccountObjectId == $right.AccountObjectId
 | where BlastRadius == "High"
 | summarize FailedAttempts = count() by AccountUpn, IPAddress, Country, bin(Timestamp, 1h) // Group attempts by hour to cut down on noise
